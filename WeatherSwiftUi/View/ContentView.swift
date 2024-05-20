@@ -20,7 +20,6 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            
             let isMorning = Calendar.current.component(.hour, from: day) >= 5 && Calendar.current.component(.hour, from: day) < 18
             
             VStack{
@@ -31,12 +30,8 @@ struct ContentView: View {
                         .bold().font(.system(size: 50))
                     Text("\(weather?.current?.condition?.text ?? "")")
                         .font(.system(size: 45))
-                    // Text("H:12 L:6")
                     Text("\(weather?.current?.pressureMb ?? 3)")
-                    
                         .font(.system(size: 40))
-                    //Image("cloud")
-                    
                     if let currentICon = weather?.current?.condition?.icon {
                         AsyncImage(url: URL(string: "https:" + (currentICon)))
                     }else{
@@ -81,7 +76,6 @@ struct ContentView: View {
                         label: { EmptyView() }
                     )
                 }
-                
                 .padding(.horizontal,50)
                 VStack{
                     HStack {
@@ -121,7 +115,6 @@ struct ContentView: View {
                     }
                 }
                 .padding(20)
-                //.background(Color.black.opacity(0.5))
                 .cornerRadius(10)
                 
             }.foregroundColor(isMorning ? .black : .white)
@@ -132,7 +125,7 @@ struct ContentView: View {
                         .edgesIgnoringSafeArea(.all)
                         .blur(radius: 1.0)
                 )
-            .onAppear {
+             .onAppear {
                 if let currentLocation = locationFetcher.currentLocation {
                         let latitude = currentLocation.coordinate.latitude
                         let longitude = currentLocation.coordinate.longitude
