@@ -1,6 +1,6 @@
 # Weather App 🌞
-# A weather app that provides current weather conditions and a three‐day forecast for your location. and can show a morning and night mode depending on your timezone 
-## Technologies Used
+## A weather app that provides current weather conditions and a three‐day forecast for your location. and can show a morning and night mode depending on your timezone 
+# Technologies Used
 ## Swift, SwiftUi, CoreLocation, UrlSession
 
 
