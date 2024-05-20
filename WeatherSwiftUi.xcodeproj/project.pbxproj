@@ -13,6 +13,12 @@
 		7F40B54D2BF181DD007EFF02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F40B54C2BF181DD007EFF02 /* Preview Assets.xcassets */; };
 		7F40B54F2BF181DD007EFF02 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F40B54E2BF181DD007EFF02 /* Persistence.swift */; };
 		7F40B5522BF181DD007EFF02 /* WeatherSwiftUi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F40B5502BF181DD007EFF02 /* WeatherSwiftUi.xcdatamodeld */; };
+		7F40B5602BF18BCE007EFF02 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F40B55F2BF18BCE007EFF02 /* Weather.swift */; };
+		7F40B5632BF18C5A007EFF02 /* ApiManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F40B5622BF18C5A007EFF02 /* ApiManger.swift */; };
+		7F40B5652BF27F4D007EFF02 /* LocationManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F40B5642BF27F4D007EFF02 /* LocationManger.swift */; };
+		7F40B5672BF3CCE1007EFF02 /* HoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F40B5662BF3CCE0007EFF02 /* HoursView.swift */; };
+		7FC4F6B42BFBBA200009909C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC4F6B32BFBBA200009909C /* HomeViewModel.swift */; };
+		7FF800532BF66B7500E3E6FE /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF800522BF66B7500E3E6FE /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +29,12 @@
 		7F40B54C2BF181DD007EFF02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7F40B54E2BF181DD007EFF02 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		7F40B5512BF181DD007EFF02 /* WeatherSwiftUi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeatherSwiftUi.xcdatamodel; sourceTree = "<group>"; };
+		7F40B55F2BF18BCE007EFF02 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		7F40B5622BF18C5A007EFF02 /* ApiManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManger.swift; sourceTree = "<group>"; };
+		7F40B5642BF27F4D007EFF02 /* LocationManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManger.swift; sourceTree = "<group>"; };
+		7F40B5662BF3CCE0007EFF02 /* HoursView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursView.swift; sourceTree = "<group>"; };
+		7FC4F6B32BFBBA200009909C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		7FF800522BF66B7500E3E6FE /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +67,11 @@
 		7F40B5442BF181DC007EFF02 /* WeatherSwiftUi */ = {
 			isa = PBXGroup;
 			children = (
+				7FC4F6B22BFBBA000009909C /* ViewModel */,
+				7FF800522BF66B7500E3E6FE /* Utilities.swift */,
+				7F40B55E2BF18911007EFF02 /* View */,
+				7F40B55C2BF18902007EFF02 /* Model */,
 				7F40B5452BF181DC007EFF02 /* WeatherSwiftUiApp.swift */,
-				7F40B5472BF181DC007EFF02 /* ContentView.swift */,
 				7F40B5492BF181DD007EFF02 /* Assets.xcassets */,
 				7F40B54E2BF181DD007EFF02 /* Persistence.swift */,
 				7F40B5502BF181DD007EFF02 /* WeatherSwiftUi.xcdatamodeld */,
@@ -71,6 +86,41 @@
 				7F40B54C2BF181DD007EFF02 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7F40B55C2BF18902007EFF02 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F40B5612BF18C13007EFF02 /* Service */,
+				7F40B55F2BF18BCE007EFF02 /* Weather.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7F40B55E2BF18911007EFF02 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F40B5472BF181DC007EFF02 /* ContentView.swift */,
+				7F40B5662BF3CCE0007EFF02 /* HoursView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7F40B5612BF18C13007EFF02 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7F40B5622BF18C5A007EFF02 /* ApiManger.swift */,
+				7F40B5642BF27F4D007EFF02 /* LocationManger.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7FC4F6B22BFBBA000009909C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7FC4F6B32BFBBA200009909C /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,10 +193,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F40B5652BF27F4D007EFF02 /* LocationManger.swift in Sources */,
+				7F40B5632BF18C5A007EFF02 /* ApiManger.swift in Sources */,
 				7F40B54F2BF181DD007EFF02 /* Persistence.swift in Sources */,
+				7FC4F6B42BFBBA200009909C /* HomeViewModel.swift in Sources */,
 				7F40B5482BF181DC007EFF02 /* ContentView.swift in Sources */,
 				7F40B5522BF181DD007EFF02 /* WeatherSwiftUi.xcdatamodeld in Sources */,
 				7F40B5462BF181DC007EFF02 /* WeatherSwiftUiApp.swift in Sources */,
+				7FF800532BF66B7500E3E6FE /* Utilities.swift in Sources */,
+				7F40B5672BF3CCE1007EFF02 /* HoursView.swift in Sources */,
+				7F40B5602BF18BCE007EFF02 /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +338,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherSwiftUi/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This App reqiure access to location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This App reqiure access to location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -310,6 +370,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherSwiftUi/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This App reqiure access to location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This App reqiure access to location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
